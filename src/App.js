@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Details from './pages/Details';
 import Products from './pages/Products';
+import Login from './pages/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,6 +12,7 @@ function Router() {
   return (
     <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="LoginPages" component={Login} options={{headerShown: false}} />
           <Stack.Screen name="ProductsPages" component={Products} options={{ 
             title: "HAmazonZ",
             headerStyle: {backgroundColor: '#64b5f6'},
